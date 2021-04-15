@@ -12,6 +12,11 @@ body {
   font-size: 18px;
   line-height: 1.67;
 }
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
 /* Logo */
 .logo {
   color: var(--title-text-color);
@@ -24,8 +29,25 @@ body {
 .logo:focus {
   color: var(--accent-color);
 }
+/* Main nav */
+.main-nav {
+  display: flex;
+  align-items: center;
+}
 /* Site nav */
+.site-nav {
+  display: flex;
+  margin-left: 70px;
+}
+.site-nav .item + .item {
+  margin-left: 40px;
+}
+
 .site-nav .link {
+  display: block;
+  padding-top: 21px;
+  padding-bottom: 21px;
+
   color: var(--accent-color);
   font-weight: 500;
   font-size: 15px;
@@ -35,6 +57,64 @@ body {
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--title-text-color);
+}
+.site-nav .link.current {
+  color: var(--title-text-color);
+}
+/* Auth nav */
+.auth-nav {
+  display: flex;
+  margin-left: auto;
+}
+.auth-nav .item + .item {
+  margin-left: 12px;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1230;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* Hero */
+.hero {
+  text-align: center;
+}
+.hero-title {
+  margin-top: 0;
+  margin-bottom: 40px;
+  color: var(--title-text-color);
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 1.43;
+}
+/* Sections */
+.section-title {
+  text-align: center;
+}
+/* Features and Examples */
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.feature-list .item {
+  width: 300px;
+  background-color: tomato;
+}
+.feature-list .title,
+.work-list .title {
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: var(--title-text-color);
+
+  font-weight: 700;
+  line-height: 1.5;
+}
+/* Works */
+.work-list > .item {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: var(--primary-white-color);
 }
 /* Button */
 .button {
